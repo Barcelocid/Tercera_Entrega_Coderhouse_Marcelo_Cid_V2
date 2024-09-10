@@ -5,7 +5,7 @@ from clientes import views
 urlpatterns = [
     path('admin/', admin.site.urls), # Visualizacion del administrador
     path('clientes/', include('clientes.urls')),  # Visualizacion clientes y sus models (cliente,pais,comida)
-    path('home/', views.home, name='home'),  # Visualizacion pagina principal
+    path('', views.home, name='home'),  # Visualizacion pagina principal
 ]
 
 

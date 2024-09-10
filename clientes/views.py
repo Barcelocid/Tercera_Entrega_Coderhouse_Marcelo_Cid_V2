@@ -45,7 +45,7 @@ def agregar_pais(request):
         form = PaisForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('home/')  # Redirige a la vista combinada después de guardar
+            return redirect('')  # Redirige a la vista combinada después de guardar
     else:
         form = PaisForm()
     return render(request, 'agregar_pais.html', {'form': form})
@@ -55,7 +55,7 @@ def agregar_cliente(request):
         form = ClienteForm(request.POST)
         if form.is_valid():
             form.save()  # Guarda los datos en la base de datos
-            return redirect('home/')  # Redirige de vuelta al formulario para agregar otro cliente
+            return redirect('')  # Redirige de vuelta al formulario para agregar otro cliente
     else:
         form = ClienteForm()
     return render(request, 'agregar_cliente.html', {'form': form})
@@ -66,7 +66,7 @@ def agregar_comida(request):
         form = ComidaForm(request.POST)
         if form.is_valid():
             form.save()  # Guarda los datos del formulario en la base de datos
-            return redirect('home/')  # Redirige al inicio o a otra página tras guardar
+            return redirect('')  # Redirige al inicio o a otra página tras guardar
     else:
         form = ComidaForm()  # Crea un formulario vacío en solicitudes GET
 
